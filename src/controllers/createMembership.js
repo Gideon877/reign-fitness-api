@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
         payment_type,
         bank_account_number, 
         contract_type,
-        amount });
+        amount });  // here you can actually pass the body like await Membership.create(req.body)
       res.status(201).json({ data: membership, message: "Membership successfully created" });
     } catch (error) {
         res.status(400).json({ error, message: "Failed to create membership." });
